@@ -17,7 +17,6 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         origenTextField.filterStrings(["Exito","Campanario","Centro","Jardines de Paz","La Esmeralda","Los Naranjos","Piscinas Comfacauca","Lomas de Granada","Plaza de toros","Terminal","La Paz","Tomas Cipriano","Cementerio","Yambitara","Lacteos purace","Camilo Torres","Tulcan","Morinda","Chirimia","Carrera 6","Calle 13","Carrera 5","La Venta","Sena Norte"])
         destinoTextField.filterStrings(["Exito","Campanario","Centro","Jardines de Paz","La Esmeralda","Los Naranjos","Piscinas Comfacauca","Lomas de Granada","Plaza de toros","Terminal","La Paz","Tomas Cipriano","Cementerio","Yambitara","Lacteos purace","Camilo Torres","Tulcan","Morinda","Chirimia","Carrera 6","Calle 13","Carrera 5","La Venta","Sena Norte"])
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,7 +29,6 @@ class HomeViewController: UIViewController {
             rutasTableViewController.origen=origenTextField.text!
             rutasTableViewController.destino=destinoTextField.text!
         }
-        
     }
 
 }

@@ -20,12 +20,13 @@
 		CB3D7C7020B4DE4300037070 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3D7C6620B4DE4100037070 /* FMDatabasePool.m */; };
 		CB3D7C7120B4DE4300037070 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3D7C6920B4DE4200037070 /* FMResultSet.m */; };
 		CB3D7C7220B4DE4300037070 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3D7C6D20B4DE4300037070 /* FMDatabaseAdditions.m */; };
+		CB3D7C7420B5C1F300037070 /* RutaFavorita.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3D7C7320B5C1F300037070 /* RutaFavorita.swift */; };
+		CB3D7C7620B5CD1300037070 /* FavoritosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3D7C7520B5CD1300037070 /* FavoritosTableViewController.swift */; };
 		CB687FD220988F2C0061FE14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB687FD120988F2C0061FE14 /* AppDelegate.swift */; };
 		CB687FD420988F2C0061FE14 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB687FD320988F2C0061FE14 /* HomeViewController.swift */; };
 		CB687FD620988F2C0061FE14 /* RutasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB687FD520988F2C0061FE14 /* RutasViewController.swift */; };
 		CB687FD920988F2C0061FE14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB687FD720988F2C0061FE14 /* Main.storyboard */; };
 		CB687FDE20988F320061FE14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB687FDC20988F320061FE14 /* LaunchScreen.storyboard */; };
-		CB687FE82098A92C0061FE14 /* FavoritosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB687FE72098A92C0061FE14 /* FavoritosViewController.swift */; };
 		CB687FEA2098A9470061FE14 /* EscanearViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB687FE92098A9470061FE14 /* EscanearViewController.swift */; };
 		CB6880D62098BBC40061FE14 /* SearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6880D52098BBC40061FE14 /* SearchTextField.swift */; };
 /* End PBXBuildFile section */
@@ -51,6 +52,8 @@
 		CB3D7C6B20B4DE4200037070 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
 		CB3D7C6C20B4DE4200037070 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
 		CB3D7C6D20B4DE4300037070 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		CB3D7C7320B5C1F300037070 /* RutaFavorita.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RutaFavorita.swift; sourceTree = "<group>"; };
+		CB3D7C7520B5CD1300037070 /* FavoritosTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritosTableViewController.swift; sourceTree = "<group>"; };
 		CB687FCE20988F2C0061FE14 /* BusTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BusTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB687FD120988F2C0061FE14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB687FD320988F2C0061FE14 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -58,7 +61,6 @@
 		CB687FD820988F2C0061FE14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CB687FDD20988F320061FE14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB687FDF20988F320061FE14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CB687FE72098A92C0061FE14 /* FavoritosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritosViewController.swift; sourceTree = "<group>"; };
 		CB687FE92098A9470061FE14 /* EscanearViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EscanearViewController.swift; sourceTree = "<group>"; };
 		CB6880D52098BBC40061FE14 /* SearchTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -142,10 +144,10 @@
 				CB3D7C4120B303B000037070 /* RutasTableViewController.swift */,
 				CB687FD320988F2C0061FE14 /* HomeViewController.swift */,
 				CB687FD520988F2C0061FE14 /* RutasViewController.swift */,
-				CB687FE72098A92C0061FE14 /* FavoritosViewController.swift */,
 				CB687FE92098A9470061FE14 /* EscanearViewController.swift */,
 				CB3D7C3D20B2FDAA00037070 /* BuscarRutasViewController.swift */,
 				CB3D7C3F20B2FDC600037070 /* DetalleRutaViewController.swift */,
+				CB3D7C7520B5CD1300037070 /* FavoritosTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -154,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				CB3D7C4320B304CC00037070 /* Ruta.swift */,
+				CB3D7C7320B5C1F300037070 /* RutaFavorita.swift */,
 				CB3D7C4520B3099E00037070 /* RutasManager.swift */,
 			);
 			path = Models;
@@ -253,7 +256,7 @@
 				CB3D7C3E20B2FDAA00037070 /* BuscarRutasViewController.swift in Sources */,
 				CB3D7C6E20B4DE4300037070 /* FMDatabase.m in Sources */,
 				CB3D7C6F20B4DE4300037070 /* FMDatabaseQueue.m in Sources */,
-				CB687FE82098A92C0061FE14 /* FavoritosViewController.swift in Sources */,
+				CB3D7C7620B5CD1300037070 /* FavoritosTableViewController.swift in Sources */,
 				CB687FD620988F2C0061FE14 /* RutasViewController.swift in Sources */,
 				CB3D7C7220B4DE4300037070 /* FMDatabaseAdditions.m in Sources */,
 				CB687FD220988F2C0061FE14 /* AppDelegate.swift in Sources */,
@@ -261,6 +264,7 @@
 				CB3D7C7120B4DE4300037070 /* FMResultSet.m in Sources */,
 				CB687FD420988F2C0061FE14 /* HomeViewController.swift in Sources */,
 				CB687FEA2098A9470061FE14 /* EscanearViewController.swift in Sources */,
+				CB3D7C7420B5C1F300037070 /* RutaFavorita.swift in Sources */,
 				CB3D7C7020B4DE4300037070 /* FMDatabasePool.m in Sources */,
 				CB6880D62098BBC40061FE14 /* SearchTextField.swift in Sources */,
 				CB3D7C4220B303B000037070 /* RutasTableViewController.swift in Sources */,

@@ -9,7 +9,6 @@
 import Foundation
 
 class Ruta {
-    var id:Int
     var nombre:String
     var destinos:[String]
     var tiempoLlegada:String
@@ -17,12 +16,11 @@ class Ruta {
     var rutaFavorita:Bool
 
 
-    init(nombre:String,tiempoLlegada:String? = "",horario:String,id:Int? = nil,destinos:[String]) {
+    init(nombre:String,tiempoLlegada:String? = "",horario:String,destinos:[String]) {
         self.nombre=nombre
         self.destinos=destinos
         self.tiempoLlegada=tiempoLlegada ?? ""
         self.horario=horario
-        self.id = id ?? -1
         rutaFavorita=false
     }
 }

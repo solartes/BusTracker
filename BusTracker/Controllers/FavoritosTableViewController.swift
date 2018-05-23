@@ -1,63 +1,71 @@
 //
-//  RutasTableViewController.swift
+//  FavoritosTableViewController.swift
 //  BusTracker
 //
-//  Created by Julian Solarte on 5/21/18.
+//  Created by Julian Solarte on 5/23/18.
 //  Copyright © 2018 unicauca. All rights reserved.
 //
 
 import UIKit
 
-class RutasTableViewController: UITableViewController {
-    
-    var rutasManager:RutasManager=RutasManager()
-    var origen:String=""
-    var destino:String=""
+class FavoritosTableViewController: UITableViewController {
 
+    var rutasManager:RutasManager=RutasManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-
+        
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     // MARK: - Table view data source
-
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        rutasManager.obtenerRutas(origen: origen, destino: destino)
+        rutasManager.obtenerRutasFavoritas()
         return rutasManager.rutasFoundCount
     }
-
+    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "rutaCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "rutaFavCell", for: indexPath)
         let ruta = rutasManager.getFoundRuta(at:indexPath.row)
         cell.textLabel?.text = ruta.nombre
         let stringText=ruta.destinos.joined(separator: "->")
         cell.detailTextLabel?.text = stringText
         return cell
     }
- 
+    
+    
+    /*
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let selectedIndexPath = tableView.indexPathForSelectedRow,
-           let detalleRutaViewController = segue.destination as? DetalleRutaViewController{
+            let detalleRutaViewController = segue.destination as? DetalleRutaViewController{
             detalleRutaViewController.ruta=rutasManager.getFoundRuta(at: selectedIndexPath.row)
         }
     }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+
+        // Configure the cell...
+
+        return cell
+    }
+    */
 
     /*
     // Override to support conditional editing of the table view.
@@ -96,6 +104,12 @@ class RutasTableViewController: UITableViewController {
 
     /*
     // MARK: - Navigation
-     */
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
+    */
 
 }

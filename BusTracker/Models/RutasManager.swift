@@ -40,6 +40,7 @@ private var rutasFile:URL = {
 class RutasManager {
     private lazy var rutas:[Ruta] = self.loadRutas()
     var rutasEncontradas:[Ruta]=[]
+    var rutasFavoritas:[RutaFavorita]=[]
     var rutasCount:Int {return rutas.count}
     var rutasFoundCount:Int {return rutasEncontradas.count}
     
@@ -89,26 +90,41 @@ class RutasManager {
             origenBool = -1
             destinoBool = -1
         }
+        verificarFavorito()
     }
     
-    func obtenerRutasFavoritas(rutasFavoritas:[String]){
-        rutasEncontradas=[]
+    func verificarFavorito(){
+        retrieveRutasFav()
         for rutaFav in rutasFavoritas {
             for rutaOri in rutas {
-                if(rutaFav==rutaOri.nombre){
+                if(rutaFav.nombre==rutaOri.nombre){
+                    rutaOri.rutaFavorita=true
+                }
+            }
+        }
+    }
+    
+    func obtenerRutasFavoritas(){
+        rutasEncontradas=[]
+        retrieveRutasFav()
+        for rutaFav in rutasFavoritas {
+            for rutaOri in rutas {
+                if(rutaFav.nombre==rutaOri.nombre){
+                    rutaOri.rutaFavorita=true
                     rutasEncontradas.append(rutaOri);
                 }
             }
         }
     }
     
-    func addRutaFav(_ ruta:Ruta) {
+    func addRutaFav(_ ruta:RutaFavorita) {
         var ruta = ruta
         SQLAddRutaFav(ruta: &ruta)
     }
     
-    func removeRutaFav(at index:Int) {
-        
+    func removeRutaFav(_ ruta:RutaFavorita) {
+        let ruta = ruta
+        SQLRemoveRutaFav(ruta: ruta)
     }
     
     func getOpenDB()->FMDatabase? {
@@ -120,7 +136,24 @@ class RutasManager {
         return db
     }
     
-    func SQLAddRutaFav(ruta:inout Ruta) {
+    func retrieveRutasFav(){
+        rutasFavoritas=[]
+        guard let db = getOpenDB() else { return }
+        do {
+            let rs = try db.executeQuery(
+                "SELECT *, ROWID FROM rutasFavoritas", values: nil)
+            while rs.next() {
+                if let ruta = RutaFavorita(rs: rs) {
+                    rutasFavoritas.append(ruta)
+                }
+            }
+        } catch {
+            print("failed: \(error.localizedDescription)")
+        }
+        db.close()
+    }
+    
+    func SQLAddRutaFav(ruta:inout RutaFavorita) {
         guard let db = getOpenDB() else { return }
         do {
             try db.executeUpdate(
@@ -134,12 +167,12 @@ class RutasManager {
         db.close()
     }
     
-    func SQLRemoveRutaFav(ruta:Ruta) {
+    func SQLRemoveRutaFav(ruta:RutaFavorita) {
         guard let db = getOpenDB() else { return }
         do {
             try db.executeUpdate(
-                "delete from rutasFavoritas where ROWID = ?",
-                values: [ruta.id]
+                "delete from rutasFavoritas where nombreRuta = ?",
+                values: [ruta.nombre]
             )
         } catch {
             print("failed: \(error.localizedDescription)")
