@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  RutasViewController.swift
 //  BusTracker
 //
 //  Created by Julian Solarte on 5/1/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class RutasViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

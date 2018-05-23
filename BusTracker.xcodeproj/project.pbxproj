@@ -7,23 +7,60 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB3D7C3E20B2FDAA00037070 /* BuscarRutasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3D7C3D20B2FDAA00037070 /* BuscarRutasViewController.swift */; };
+		CB3D7C4020B2FDC600037070 /* DetalleRutaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3D7C3F20B2FDC600037070 /* DetalleRutaViewController.swift */; };
+		CB3D7C4220B303B000037070 /* RutasTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3D7C4120B303B000037070 /* RutasTableViewController.swift */; };
+		CB3D7C4420B304CC00037070 /* Ruta.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3D7C4320B304CC00037070 /* Ruta.swift */; };
+		CB3D7C4620B3099E00037070 /* RutasManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3D7C4520B3099E00037070 /* RutasManager.swift */; };
+		CB3D7C4820B472C700037070 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB3D7C4720B472C700037070 /* Assets.xcassets */; };
+		CB3D7C4A20B4846A00037070 /* Rutas.db in Resources */ = {isa = PBXBuildFile; fileRef = CB3D7C4920B4846A00037070 /* Rutas.db */; };
+		CB3D7C4D20B4DBFC00037070 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CB3D7C4C20B4DBFB00037070 /* libsqlite3.tbd */; };
+		CB3D7C6E20B4DE4300037070 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3D7C6320B4DE4000037070 /* FMDatabase.m */; };
+		CB3D7C6F20B4DE4300037070 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3D7C6520B4DE4100037070 /* FMDatabaseQueue.m */; };
+		CB3D7C7020B4DE4300037070 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3D7C6620B4DE4100037070 /* FMDatabasePool.m */; };
+		CB3D7C7120B4DE4300037070 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3D7C6920B4DE4200037070 /* FMResultSet.m */; };
+		CB3D7C7220B4DE4300037070 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3D7C6D20B4DE4300037070 /* FMDatabaseAdditions.m */; };
 		CB687FD220988F2C0061FE14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB687FD120988F2C0061FE14 /* AppDelegate.swift */; };
-		CB687FD420988F2C0061FE14 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB687FD320988F2C0061FE14 /* FirstViewController.swift */; };
-		CB687FD620988F2C0061FE14 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB687FD520988F2C0061FE14 /* SecondViewController.swift */; };
+		CB687FD420988F2C0061FE14 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB687FD320988F2C0061FE14 /* HomeViewController.swift */; };
+		CB687FD620988F2C0061FE14 /* RutasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB687FD520988F2C0061FE14 /* RutasViewController.swift */; };
 		CB687FD920988F2C0061FE14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB687FD720988F2C0061FE14 /* Main.storyboard */; };
-		CB687FDB20988F320061FE14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB687FDA20988F320061FE14 /* Assets.xcassets */; };
 		CB687FDE20988F320061FE14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB687FDC20988F320061FE14 /* LaunchScreen.storyboard */; };
+		CB687FE82098A92C0061FE14 /* FavoritosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB687FE72098A92C0061FE14 /* FavoritosViewController.swift */; };
+		CB687FEA2098A9470061FE14 /* EscanearViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB687FE92098A9470061FE14 /* EscanearViewController.swift */; };
+		CB6880D62098BBC40061FE14 /* SearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6880D52098BBC40061FE14 /* SearchTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CB3D7C3D20B2FDAA00037070 /* BuscarRutasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuscarRutasViewController.swift; sourceTree = "<group>"; };
+		CB3D7C3F20B2FDC600037070 /* DetalleRutaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleRutaViewController.swift; sourceTree = "<group>"; };
+		CB3D7C4120B303B000037070 /* RutasTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RutasTableViewController.swift; path = BusTracker/Controllers/RutasTableViewController.swift; sourceTree = SOURCE_ROOT; };
+		CB3D7C4320B304CC00037070 /* Ruta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ruta.swift; sourceTree = "<group>"; };
+		CB3D7C4520B3099E00037070 /* RutasManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RutasManager.swift; sourceTree = "<group>"; };
+		CB3D7C4720B472C700037070 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CB3D7C4920B4846A00037070 /* Rutas.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = Rutas.db; sourceTree = "<group>"; };
+		CB3D7C4C20B4DBFB00037070 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		CB3D7C6220B4DE3D00037070 /* BusTracker-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BusTracker-Bridging-Header.h"; sourceTree = "<group>"; };
+		CB3D7C6320B4DE4000037070 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		CB3D7C6420B4DE4100037070 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		CB3D7C6520B4DE4100037070 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		CB3D7C6620B4DE4100037070 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		CB3D7C6720B4DE4200037070 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		CB3D7C6820B4DE4200037070 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		CB3D7C6920B4DE4200037070 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		CB3D7C6A20B4DE4200037070 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		CB3D7C6B20B4DE4200037070 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		CB3D7C6C20B4DE4200037070 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		CB3D7C6D20B4DE4300037070 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
 		CB687FCE20988F2C0061FE14 /* BusTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BusTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB687FD120988F2C0061FE14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CB687FD320988F2C0061FE14 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		CB687FD520988F2C0061FE14 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		CB687FD320988F2C0061FE14 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		CB687FD520988F2C0061FE14 /* RutasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RutasViewController.swift; sourceTree = "<group>"; };
 		CB687FD820988F2C0061FE14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		CB687FDA20988F320061FE14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB687FDD20988F320061FE14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB687FDF20988F320061FE14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB687FE72098A92C0061FE14 /* FavoritosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritosViewController.swift; sourceTree = "<group>"; };
+		CB687FE92098A9470061FE14 /* EscanearViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EscanearViewController.swift; sourceTree = "<group>"; };
+		CB6880D52098BBC40061FE14 /* SearchTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +68,46 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB3D7C4D20B4DBFC00037070 /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CB3D7C4B20B4DBF900037070 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CB3D7C4C20B4DBFB00037070 /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CB3D7C6120B4DD6200037070 /* fmdb */ = {
+			isa = PBXGroup;
+			children = (
+				CB3D7C6A20B4DE4200037070 /* FMDatabase.h */,
+				CB3D7C6320B4DE4000037070 /* FMDatabase.m */,
+				CB3D7C6C20B4DE4200037070 /* FMDatabaseAdditions.h */,
+				CB3D7C6D20B4DE4300037070 /* FMDatabaseAdditions.m */,
+				CB3D7C6420B4DE4100037070 /* FMDatabasePool.h */,
+				CB3D7C6620B4DE4100037070 /* FMDatabasePool.m */,
+				CB3D7C6B20B4DE4200037070 /* FMDatabaseQueue.h */,
+				CB3D7C6520B4DE4100037070 /* FMDatabaseQueue.m */,
+				CB3D7C6720B4DE4200037070 /* FMDB.h */,
+				CB3D7C6820B4DE4200037070 /* FMResultSet.h */,
+				CB3D7C6920B4DE4200037070 /* FMResultSet.m */,
+				CB3D7C6220B4DE3D00037070 /* BusTracker-Bridging-Header.h */,
+			);
+			path = fmdb;
+			sourceTree = "<group>";
+		};
 		CB687FC520988F2B0061FE14 = {
 			isa = PBXGroup;
 			children = (
 				CB687FD020988F2C0061FE14 /* BusTracker */,
 				CB687FCF20988F2C0061FE14 /* Products */,
+				CB3D7C4B20B4DBF900037070 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +122,57 @@
 		CB687FD020988F2C0061FE14 /* BusTracker */ = {
 			isa = PBXGroup;
 			children = (
-				CB687FD120988F2C0061FE14 /* AppDelegate.swift */,
-				CB687FD320988F2C0061FE14 /* FirstViewController.swift */,
-				CB687FD520988F2C0061FE14 /* SecondViewController.swift */,
-				CB687FD720988F2C0061FE14 /* Main.storyboard */,
-				CB687FDA20988F320061FE14 /* Assets.xcassets */,
+				CB3D7C6120B4DD6200037070 /* fmdb */,
+				CB3D7C4920B4846A00037070 /* Rutas.db */,
+				CB687FF02098B6250061FE14 /* Utilities */,
+				CB687FED2098AA190061FE14 /* Views */,
+				CB687FEC2098AA050061FE14 /* Models */,
+				CB687FEB2098A9FA0061FE14 /* Controllers */,
 				CB687FDC20988F320061FE14 /* LaunchScreen.storyboard */,
 				CB687FDF20988F320061FE14 /* Info.plist */,
+				CB3D7C4720B472C700037070 /* Assets.xcassets */,
 			);
 			path = BusTracker;
+			sourceTree = "<group>";
+		};
+		CB687FEB2098A9FA0061FE14 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CB687FD120988F2C0061FE14 /* AppDelegate.swift */,
+				CB3D7C4120B303B000037070 /* RutasTableViewController.swift */,
+				CB687FD320988F2C0061FE14 /* HomeViewController.swift */,
+				CB687FD520988F2C0061FE14 /* RutasViewController.swift */,
+				CB687FE72098A92C0061FE14 /* FavoritosViewController.swift */,
+				CB687FE92098A9470061FE14 /* EscanearViewController.swift */,
+				CB3D7C3D20B2FDAA00037070 /* BuscarRutasViewController.swift */,
+				CB3D7C3F20B2FDC600037070 /* DetalleRutaViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CB687FEC2098AA050061FE14 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CB3D7C4320B304CC00037070 /* Ruta.swift */,
+				CB3D7C4520B3099E00037070 /* RutasManager.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CB687FED2098AA190061FE14 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CB687FD720988F2C0061FE14 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CB687FF02098B6250061FE14 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				CB6880D52098BBC40061FE14 /* SearchTextField.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -99,6 +207,7 @@
 				TargetAttributes = {
 					CB687FCD20988F2C0061FE14 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
 					};
 				};
 			};
@@ -126,8 +235,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB687FDE20988F320061FE14 /* LaunchScreen.storyboard in Resources */,
-				CB687FDB20988F320061FE14 /* Assets.xcassets in Resources */,
+				CB3D7C4820B472C700037070 /* Assets.xcassets in Resources */,
 				CB687FD920988F2C0061FE14 /* Main.storyboard in Resources */,
+				CB3D7C4A20B4846A00037070 /* Rutas.db in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,9 +248,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB687FD620988F2C0061FE14 /* SecondViewController.swift in Sources */,
+				CB3D7C4020B2FDC600037070 /* DetalleRutaViewController.swift in Sources */,
+				CB3D7C4620B3099E00037070 /* RutasManager.swift in Sources */,
+				CB3D7C3E20B2FDAA00037070 /* BuscarRutasViewController.swift in Sources */,
+				CB3D7C6E20B4DE4300037070 /* FMDatabase.m in Sources */,
+				CB3D7C6F20B4DE4300037070 /* FMDatabaseQueue.m in Sources */,
+				CB687FE82098A92C0061FE14 /* FavoritosViewController.swift in Sources */,
+				CB687FD620988F2C0061FE14 /* RutasViewController.swift in Sources */,
+				CB3D7C7220B4DE4300037070 /* FMDatabaseAdditions.m in Sources */,
 				CB687FD220988F2C0061FE14 /* AppDelegate.swift in Sources */,
-				CB687FD420988F2C0061FE14 /* FirstViewController.swift in Sources */,
+				CB3D7C4420B304CC00037070 /* Ruta.swift in Sources */,
+				CB3D7C7120B4DE4300037070 /* FMResultSet.m in Sources */,
+				CB687FD420988F2C0061FE14 /* HomeViewController.swift in Sources */,
+				CB687FEA2098A9470061FE14 /* EscanearViewController.swift in Sources */,
+				CB3D7C7020B4DE4300037070 /* FMDatabasePool.m in Sources */,
+				CB6880D62098BBC40061FE14 /* SearchTextField.swift in Sources */,
+				CB3D7C4220B303B000037070 /* RutasTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +407,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = BusTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -292,6 +416,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.unicauca.BusTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BusTracker/fmdb/BusTracker-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -301,6 +427,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = BusTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -309,6 +436,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.unicauca.BusTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BusTracker/fmdb/BusTracker-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
