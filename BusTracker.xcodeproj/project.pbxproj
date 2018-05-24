@@ -30,6 +30,7 @@
 		CB687FEA2098A9470061FE14 /* EscanearViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB687FE92098A9470061FE14 /* EscanearViewController.swift */; };
 		CB6880D62098BBC40061FE14 /* SearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6880D52098BBC40061FE14 /* SearchTextField.swift */; };
 		D158082220B7337F005E3BC8 /* RutasEscanerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D158082120B7337F005E3BC8 /* RutasEscanerTableViewController.swift */; };
+		D158082620B73694005E3BC8 /* RutaWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D158082520B73694005E3BC8 /* RutaWebService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +66,7 @@
 		CB687FE92098A9470061FE14 /* EscanearViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EscanearViewController.swift; sourceTree = "<group>"; };
 		CB6880D52098BBC40061FE14 /* SearchTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTextField.swift; sourceTree = "<group>"; };
 		D158082120B7337F005E3BC8 /* RutasEscanerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RutasEscanerTableViewController.swift; sourceTree = "<group>"; };
+		D158082520B73694005E3BC8 /* RutaWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RutaWebService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +163,7 @@
 				CB3D7C4320B304CC00037070 /* Ruta.swift */,
 				CB3D7C7320B5C1F300037070 /* RutaFavorita.swift */,
 				CB3D7C4520B3099E00037070 /* RutasManager.swift */,
+				D158082520B73694005E3BC8 /* RutaWebService.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 				CB3D7C3E20B2FDAA00037070 /* BuscarRutasViewController.swift in Sources */,
 				CB3D7C6E20B4DE4300037070 /* FMDatabase.m in Sources */,
 				CB3D7C6F20B4DE4300037070 /* FMDatabaseQueue.m in Sources */,
+				D158082620B73694005E3BC8 /* RutaWebService.swift in Sources */,
 				CB3D7C7620B5CD1300037070 /* FavoritosTableViewController.swift in Sources */,
 				CB3D7C7220B4DE4300037070 /* FMDatabaseAdditions.m in Sources */,
 				CB687FD220988F2C0061FE14 /* AppDelegate.swift in Sources */,

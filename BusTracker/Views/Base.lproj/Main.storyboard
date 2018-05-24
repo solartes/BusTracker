@@ -315,10 +315,10 @@
             </objects>
             <point key="canvasLocation" x="1941.5999999999999" y="1458.6206896551726"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Rutas Escaner Table View Controller-->
         <scene sceneID="b6d-bc-BQF">
             <objects>
-                <tableViewController storyboardIdentifier="rutasEscaner" id="bTz-M8-BZQ" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="rutasEscaner" id="bTz-M8-BZQ" customClass="RutasEscanerTableViewController" customModule="BusTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="J4p-9A-U1u">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -341,7 +341,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AhT-VW-IdV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3065" y="1448"/>
+            <point key="canvasLocation" x="3090" y="1459"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">

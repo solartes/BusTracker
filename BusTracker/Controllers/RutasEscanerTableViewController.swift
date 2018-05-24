@@ -8,10 +8,21 @@
 
 import UIKit
 
+
+
 class RutasEscanerTableViewController: UITableViewController {
     
+    
     var lugarParadero:String = ""
-
+    var rutaService: RutaService = RutaWebService()
+    var rutasManager:RutasManager = RutasManager()
+    var origen:String = ""
+    var destino:String = ""
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -31,14 +42,28 @@ class RutasEscanerTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        rutasManager.obtenerRutas(origen: origen, destino: destino)
+        return rutasManager.rutasFoundCount
     }
-
+    
+    func getRuta(with barcode: String,
+                 completionHandler: @escaping (Ruta?, Error?) -> Void) {
+    }
+    
+    // Get book from web service
+    func cancel() {
+        // Cancel any web service operations
+    }
+    
+    
+    
+    
+    
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
