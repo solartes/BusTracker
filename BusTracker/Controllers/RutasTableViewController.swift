@@ -52,6 +52,7 @@ class RutasTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "rutaCell", for: indexPath)
         let ruta = rutasManager.getFoundRuta(at:indexPath.row)
         cell.textLabel?.text = ruta.nombre
+        cell.detailTextLabel?.numberOfLines=0
         let stringText=ruta.destinos.joined(separator: "->")
         cell.detailTextLabel?.text = stringText
         return cell

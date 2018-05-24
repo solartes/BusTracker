@@ -14,7 +14,8 @@ class DetalleRutaViewController: UIViewController {
     var rutaManager:RutasManager=RutasManager()
     @IBOutlet weak var nombreRuta: UILabel!
     @IBOutlet weak var horarioRuta: UILabel!
-    @IBOutlet weak var recorridoRuta: UILabel!
+
+    @IBOutlet weak var recorridoRuta: UITextView!
     @IBOutlet weak var favBoton: UIButton!
     
     
@@ -34,7 +35,16 @@ class DetalleRutaViewController: UIViewController {
         if let ruta=ruta{
             nombreRuta.text=ruta.nombre
             horarioRuta.text=ruta.horario
-            recorridoRuta.text=ruta.destinos.joined(separator: "->")
+            var string=""
+            for (index,destino) in ruta.destinos.enumerated(){
+                let str = String(repeating: "   ", count: index+1)
+                if index==0{
+                 string=string+str+">"+destino
+                }else{
+                 string=string+"\n"+str+">"+destino
+                }
+            }
+            recorridoRuta.text=string
             if ruta.rutaFavorita {
                 favBoton.setImage(UIImage(named: "yesfav.png"), for: .normal)
             }
