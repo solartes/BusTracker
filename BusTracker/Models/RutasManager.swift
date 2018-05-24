@@ -54,7 +54,7 @@ class RutasManager {
     
     private func todasRutas()->[Ruta] {
         return [
-            Ruta(nombre:"Ruta 1",horario:"Lunes a Viernes 6:00am - 8:00pm",destinos:["La Paz","Exito","Terminal","La Esmeralda","Tomas Cipriano","Los Naranjos"]),
+            Ruta(nombre:"Ruta 1",horario:"Lunes a Viernes \n \t 6:00am - 8:00pm \n Sabados y Domingos \n \t 2:00pm-8:00pm",destinos:["La Paz","Exito","Terminal","La Esmeralda","Tomas Cipriano","Los Naranjos"]),
             Ruta(nombre:"Ruta 2",horario:"Lunes a Viernes 6:00am - 8:00pm",destinos:["Tomas Cipriano","Chirimia","Centro","Carrera 6","Campanario","Jardines de Paz"]),
             Ruta(nombre:"Ruta 4",horario:"Lunes a Viernes 6:00am - 8:00pm",destinos:["Piscinas Comfacauca","Centro","Carrera 5","Plaza de toros","Calle 13","Chirimia","Lomas de Granada"]),
             Ruta(nombre:"Ruta 5",horario:"Lunes a Viernes 6:00am - 8:00pm",destinos:["Yambitara","Centro","Carrera 6","Calle 13","Cementerio","Tomas Cipriano"]),
