@@ -285,18 +285,63 @@
         <!--Escanear-->
         <scene sceneID="xa4-LM-pay">
             <objects>
-                <viewController id="E4E-Xf-ayp" sceneMemberID="viewController">
+                <viewController id="E4E-Xf-ayp" customClass="EscanearViewController" customModule="BusTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JKX-d8-fGv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CME-gt-RxZ">
+                                <rect key="frame" x="79" y="273" width="217" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Y9-m0-uwa">
+                                <rect key="frame" x="92" y="311" width="191" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Simulate Barcode Detection"/>
+                                <connections>
+                                    <segue destination="bTz-M8-BZQ" kind="show" id="zuL-zw-aBq"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="8V7-GF-ux5"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Escanear" image="qr" id="CWF-ny-exU"/>
+                    <navigationItem key="navigationItem" title="Escanear" id="Mw7-AX-UyU"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ExG-Pj-HVc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="758" y="1459"/>
+            <point key="canvasLocation" x="1941.5999999999999" y="1458.6206896551726"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="b6d-bc-BQF">
+            <objects>
+                <tableViewController storyboardIdentifier="rutasEscaner" id="bTz-M8-BZQ" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="J4p-9A-U1u">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Bya-xs-Ndc">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Bya-xs-Ndc" id="Alc-Mf-r1l">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="bTz-M8-BZQ" id="Pu6-qz-r8T"/>
+                            <outlet property="delegate" destination="bTz-M8-BZQ" id="PQc-fJ-A9J"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AhT-VW-IdV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3065" y="1448"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -311,7 +356,7 @@
                         <segue destination="hjq-DU-ZiL" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="DXA-Vg-UaV" kind="relationship" relationship="viewControllers" id="xFY-Gh-3F6"/>
                         <segue destination="UJy-EG-ZYI" kind="relationship" relationship="viewControllers" id="gSB-uG-1KC"/>
-                        <segue destination="E4E-Xf-ayp" kind="relationship" relationship="viewControllers" id="gsN-1j-hgD"/>
+                        <segue destination="N6V-5C-U4v" kind="relationship" relationship="viewControllers" id="gsN-1j-hgD"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -375,6 +420,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gB1-tk-TxS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="757.60000000000002" y="-165.51724137931035"/>
+        </scene>
+        <!--Escanear-->
+        <scene sceneID="tfO-CY-N3q">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="N6V-5C-U4v" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Escanear" image="qr" id="CWF-ny-exU"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="f5W-tv-0lH">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="E4E-Xf-ayp" kind="relationship" relationship="rootViewController" id="sZu-hf-VIS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B1j-IV-u3K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="757.60000000000002" y="1458.6206896551726"/>
         </scene>
     </scenes>
     <resources>

@@ -29,6 +29,7 @@
 		CB687FDE20988F320061FE14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB687FDC20988F320061FE14 /* LaunchScreen.storyboard */; };
 		CB687FEA2098A9470061FE14 /* EscanearViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB687FE92098A9470061FE14 /* EscanearViewController.swift */; };
 		CB6880D62098BBC40061FE14 /* SearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6880D52098BBC40061FE14 /* SearchTextField.swift */; };
+		D158082220B7337F005E3BC8 /* RutasEscanerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D158082120B7337F005E3BC8 /* RutasEscanerTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +64,7 @@
 		CB687FDF20988F320061FE14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB687FE92098A9470061FE14 /* EscanearViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EscanearViewController.swift; sourceTree = "<group>"; };
 		CB6880D52098BBC40061FE14 /* SearchTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTextField.swift; sourceTree = "<group>"; };
+		D158082120B7337F005E3BC8 /* RutasEscanerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RutasEscanerTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 				CB3D7C3F20B2FDC600037070 /* DetalleRutaViewController.swift */,
 				CB3D7C7520B5CD1300037070 /* FavoritosTableViewController.swift */,
 				CB3D7C7720B659B200037070 /* TodasRutasTableViewController.swift */,
+				D158082120B7337F005E3BC8 /* RutasEscanerTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 				CB3D7C7220B4DE4300037070 /* FMDatabaseAdditions.m in Sources */,
 				CB687FD220988F2C0061FE14 /* AppDelegate.swift in Sources */,
 				CB3D7C4420B304CC00037070 /* Ruta.swift in Sources */,
+				D158082220B7337F005E3BC8 /* RutasEscanerTableViewController.swift in Sources */,
 				CB3D7C7120B4DE4300037070 /* FMResultSet.m in Sources */,
 				CB687FD420988F2C0061FE14 /* HomeViewController.swift in Sources */,
 				CB687FEA2098A9470061FE14 /* EscanearViewController.swift in Sources */,
