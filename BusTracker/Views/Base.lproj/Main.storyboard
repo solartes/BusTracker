@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Inicio-->
+        <!--Buscar Rutas-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <viewController id="9pv-A4-QxB" customClass="HomeViewController" customModule="BusTracker" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,13 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7LH-D6-HWD">
-                                <rect key="frame" x="166" y="120" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Origen:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QPz-4T-eSW">
                                 <rect key="frame" x="25" y="280" width="71" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -66,7 +59,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Inicio" image="home" id="acW-dT-cKf"/>
+                    <navigationItem key="navigationItem" title="Buscar Rutas" id="qh7-di-MfG"/>
                     <connections>
                         <outlet property="destinoTextField" destination="7cz-kW-mSc" id="Qs8-ig-p6A"/>
                         <outlet property="origenTextField" destination="1ve-uA-lpG" id="SwE-Up-ZoF"/>
@@ -74,9 +67,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="758" y="-969"/>
+            <point key="canvasLocation" x="1700" y="-969.45812807881782"/>
         </scene>
-        <!--Rutas Table View Controller-->
+        <!--Rutas-->
         <scene sceneID="26c-5M-iZy">
             <objects>
                 <tableViewController id="yq2-zD-42r" customClass="RutasTableViewController" customModule="BusTracker" customModuleProvider="target" sceneMemberID="viewController">
@@ -122,10 +115,11 @@
                             <outlet property="delegate" destination="yq2-zD-42r" id="4iX-5b-ips"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Rutas" id="qxi-yx-3Kd"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u4D-OP-RML" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2012" y="-959"/>
+            <point key="canvasLocation" x="2922.4000000000001" y="-969.45812807881782"/>
         </scene>
         <!--Detalle Ruta View Controller-->
         <scene sceneID="Dfb-Ca-9d3">
@@ -181,9 +175,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e9X-5K-mKT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3320.8000000000002" y="-103.44827586206897"/>
+            <point key="canvasLocation" x="4545" y="263"/>
         </scene>
-        <!--Favoritos-->
+        <!--Rutas Favoritas-->
         <scene sceneID="h5r-O8-gS5">
             <objects>
                 <tableViewController id="UPR-gZ-dZd" customClass="FavoritosTableViewController" customModule="BusTracker" customModuleProvider="target" sceneMemberID="viewController">
@@ -219,6 +213,9 @@
                                         </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="K8N-1X-VaY" kind="show" id="YfF-fk-2vr"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -226,28 +223,64 @@
                             <outlet property="delegate" destination="UPR-gZ-dZd" id="l9U-w2-dqb"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Favoritos" image="favicon" id="fdW-nk-KXl"/>
+                    <navigationItem key="navigationItem" title="Rutas Favoritas" id="lsa-d8-VRq"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o6h-ek-5mQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="758" y="-165"/>
+            <point key="canvasLocation" x="1700" y="-165.51724137931035"/>
         </scene>
-        <!--Rutas-->
-        <scene sceneID="ocH-Ar-B7C">
+        <!--Todas las rutas-->
+        <scene sceneID="Gho-GG-JJ6">
             <objects>
-                <viewController id="3iM-X7-j3O" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Oq4-Tg-0CR">
+                <tableViewController id="VP3-Zf-far" customClass="TodasRutasTableViewController" customModule="BusTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="FuI-T1-Mt8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="VFE-D1-bz3"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Rutas" image="bus" id="Nlo-CH-vkb"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5WU-0J-heD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="rutaAllCell" textLabel="iOH-hZ-zXo" detailTextLabel="nSd-FA-oep" imageView="Sst-Sn-jH9" style="IBUITableViewCellStyleSubtitle" id="Oui-8v-USM">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Oui-8v-USM" id="dk1-kz-58J">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iOH-hZ-zXo">
+                                            <rect key="frame" x="71" y="5" width="33.333333333333336" height="20.333333333333332"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nSd-FA-oep">
+                                            <rect key="frame" x="71" y="25.333333333333332" width="43.666666666666664" height="14.333333333333334"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="bus-color" id="Sst-Sn-jH9">
+                                            <rect key="frame" x="16" y="1" width="40" height="40"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="K8N-1X-VaY" kind="show" id="tXB-1a-PgF"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="VP3-Zf-far" id="4dR-HB-Lc9"/>
+                            <outlet property="delegate" destination="VP3-Zf-far" id="Hrb-pX-wRJ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Todas las rutas" id="23L-bC-hyD"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e6y-RE-jPN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="758" y="634"/>
+            <point key="canvasLocation" x="1943" y="553"/>
         </scene>
         <!--Escanear-->
         <scene sceneID="xa4-LM-pay">
@@ -275,15 +308,73 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
-                        <segue destination="UPR-gZ-dZd" kind="relationship" relationship="viewControllers" id="xFY-Gh-3F6"/>
-                        <segue destination="3iM-X7-j3O" kind="relationship" relationship="viewControllers" id="ocu-dw-hZk"/>
+                        <segue destination="hjq-DU-ZiL" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="DXA-Vg-UaV" kind="relationship" relationship="viewControllers" id="xFY-Gh-3F6"/>
+                        <segue destination="UJy-EG-ZYI" kind="relationship" relationship="viewControllers" id="gSB-uG-1KC"/>
                         <segue destination="E4E-Xf-ayp" kind="relationship" relationship="viewControllers" id="gsN-1j-hgD"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1332" y="146"/>
+        </scene>
+        <!--Inicio-->
+        <scene sceneID="qep-lS-UA8">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hjq-DU-ZiL" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Inicio" image="home" id="acW-dT-cKf"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PQT-Qo-4Jl">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="rootViewController" id="kee-vp-8s4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Y9-ge-N2e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="757.60000000000002" y="-969.45812807881782"/>
+        </scene>
+        <!--Rutas-->
+        <scene sceneID="UpB-1C-aHW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UJy-EG-ZYI" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Rutas" image="bus" id="Q8I-GE-YRB"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YmR-sJ-fk7">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="VP3-Zf-far" kind="relationship" relationship="rootViewController" id="X5q-kE-xFb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jwy-Od-Dbf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="757.60000000000002" y="552.70935960591135"/>
+        </scene>
+        <!--Favoritos-->
+        <scene sceneID="enh-yy-h7O">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DXA-Vg-UaV" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Favoritos" image="favicon" id="fdW-nk-KXl"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="AHk-AN-b25">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="UPR-gZ-dZd" kind="relationship" relationship="rootViewController" id="Kvg-xD-Mqc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gB1-tk-TxS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="757.60000000000002" y="-165.51724137931035"/>
         </scene>
     </scenes>
     <resources>
@@ -295,4 +386,7 @@
         <image name="nofav" width="120" height="120"/>
         <image name="qr" width="29" height="29"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="qr9-bD-YhV"/>
+    </inferredMetricsTieBreakers>
 </document>

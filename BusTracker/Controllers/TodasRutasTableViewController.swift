@@ -1,5 +1,5 @@
 //
-//  FavoritosTableViewController.swift
+//  TodasRutasTableViewController.swift
 //  BusTracker
 //
 //  Created by Julian Solarte on 5/23/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FavoritosTableViewController: UITableViewController {
+class TodasRutasTableViewController: UITableViewController {
 
     var rutasManager:RutasManager=RutasManager()
     
@@ -40,13 +40,13 @@ class FavoritosTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        rutasManager.obtenerRutasFavoritas()
+        rutasManager.obtenerTodasRutas()
         return rutasManager.rutasFoundCount
     }
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "rutaFavCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "rutaAllCell", for: indexPath)
         let ruta = rutasManager.getFoundRuta(at:indexPath.row)
         cell.textLabel?.text = ruta.nombre
         let stringText=ruta.destinos.joined(separator: "->")
@@ -60,15 +60,8 @@ class FavoritosTableViewController: UITableViewController {
             detalleRutaViewController.ruta=rutasManager.getFoundRuta(at: selectedIndexPath.row)
         }
     }
-    
+
     /*
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let selectedIndexPath = tableView.indexPathForSelectedRow,
-            let detalleRutaViewController = segue.destination as? DetalleRutaViewController{
-            detalleRutaViewController.ruta=rutasManager.getFoundRuta(at: selectedIndexPath.row)
-        }
-    }
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 

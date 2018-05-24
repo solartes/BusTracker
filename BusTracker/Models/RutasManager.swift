@@ -44,10 +44,6 @@ class RutasManager {
     var rutasCount:Int {return rutas.count}
     var rutasFoundCount:Int {return rutasEncontradas.count}
     
-    func getAllRuta(at index:Int)->Ruta {
-        return rutas[index]
-    }
-    
     func getFoundRuta(at index:Int)->Ruta {
         return rutasEncontradas[index]
     }
@@ -102,6 +98,10 @@ class RutasManager {
                 }
             }
         }
+    }
+    
+    func obtenerTodasRutas(){
+        rutasEncontradas=todasRutas()
     }
     
     func obtenerRutasFavoritas(){

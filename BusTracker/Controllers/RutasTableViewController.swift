@@ -14,6 +14,11 @@ class RutasTableViewController: UITableViewController {
     var origen:String=""
     var destino:String=""
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
